@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father {
+            width: 800px;
+            height: 400px;
+            background-color: pink;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            /* 加了绝对定位的盒子 左右 margin 无效 */
+            position: absolute;
+            /*margin: 0 auto;*/
+            left: 50%; /* 以父盒子为基准对齐 */
+            margin-left: -50px; /* 左走自己宽度的一半 */
+            top: 50%;
+            margin-top: -50px;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+
+</body>
+</html>

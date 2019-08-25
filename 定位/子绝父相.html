@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 孩子是绝对定位，父亲是相对定位 */
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px;
+            position: relative;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: deeppink;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="father">
+    <div class="son">
+        子绝父相的由来
+        1. 相对定位，占有位置，不脱标
+        2. 绝对定位，不占有位置，完全脱标
+    </div>
+</div>
+</body>
+</html>
