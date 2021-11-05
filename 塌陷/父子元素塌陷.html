@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent {
+            width: 200px;
+            height: 200px;
+            background: #cccccc;
+            margin-top: 100px;
+        }
+
+        .son {
+            width: 50px;
+            height: 50px;
+            background: #ff8500;
+            margin-top: 50px; /* 会导致塌陷 */
+        }
+
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="son">
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .left {
+            width: 200px;
+            float: left;
+            background-color: pink
+        }
+
+        .right {
+            width: 200px;
+            float: right;
+            background-color: pink
+        }
+
+        .center {
+            margin: 0 200px;
+            background-color: lightblue
+        }
+    </style>
+
+</head>
+<body>
+<div class="left">左边固定宽度</div>
+<div class="right">左边固定宽度</div>
+<!--
+    为什么放最后一行？
+    1. 浮动的元素本身会上浮
+    2. 中间的元素没有浮动，如果放在第一行或者第二行，会占用一行，那边左浮动或右浮动会在下一行
+ -->
+<div class="center">中间自适应</div>
+
+</body>
+</html>

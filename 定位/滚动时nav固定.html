@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            height: 50px;
+            width: 100%; /* fixed 元素需要设置宽度 */
+            background: #222;
+        }
+
+        .main {
+            margin-top: 50px;
+            height: 1200px;
+            background: skyblue;
+            /*position: relative;*/
+        }
+
+        .nav {
+            width: 1170px;
+            margin: 0 auto;
+        }
+
+        .nav > ul > li {
+            line-height: 50px;
+            float: left;
+            color: #ffffff;
+            padding: 0 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .nav > ul > li:hover {
+            color: #cccccc;
+        }
+
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+<div class="header">
+    <div class="nav">
+        <ul>
+            <li>首页</li>
+            <li>程序员</li>
+            <li>Java</li>
+            <li>Go</li>
+            <li>Vue.js</li>
+            <li>Flutter</li>
+            <li>开源项目</li>
+        </ul>
+    </div>
+</div>
+<div class="main">
+    main
+</div>
+</body>
+</html>

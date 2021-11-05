@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .son1 {
+            width: 50px;
+            height: 50px;
+            background: #ff8500;
+            margin-bottom: 50px;
+        }
+
+        .son2 {
+            width: 50px;
+            height: 50px;
+            background: #cccccc;
+            margin-top: 50px; /* 会导致塌陷 */
+        }
+
+    </style>
+</head>
+<body>
+<div class="son1"></div>
+<div class="son2"></div>
+</body>
+</html>
