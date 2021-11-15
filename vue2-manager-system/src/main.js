@@ -2,6 +2,7 @@ import Vue from 'vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import App from './App.vue'
+import './styles/login.less'
 import router from './router'
 /**
  * route 拦截

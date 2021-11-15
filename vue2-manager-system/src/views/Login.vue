@@ -1,15 +1,17 @@
 <template>
     <div class="login-container">
-        <el-form ref="loginForm" :model="loginForm" :rules="loginRules" label-width="80px" class="login-form">
+        <el-form ref="loginForm" :inline="false" :model="loginForm" :rules="loginRules" label-width="80px"
+                 class="login-form">
             <h2 class="login-title">管理系统</h2>
             <el-form-item label="用户名" prop="username">
-                <el-input v-model="loginForm.username"></el-input>
+                <el-input class="login-input" v-model="loginForm.username" placeholder="用户名"></el-input>
             </el-form-item>
             <el-form-item label="密码" prop="password">
-                <el-input type="password" v-model="loginForm.password" autocomplete="false"></el-input>
+                <el-input class="login-input" type="password" v-model="loginForm.password" placeholder="密码"
+                          autocomplete="false"></el-input>
             </el-form-item>
             <el-form-item>
-                <el-button type="primary" @click="login">登录</el-button>
+                <el-button type="info" @click="login">登录</el-button>
             </el-form-item>
         </el-form>
     </div>
@@ -77,20 +79,39 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background: #666666;
+        background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
     }
 
     .login-form {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        margin-left: -175px;
         width: 350px;
-        margin: 160px auto;
-        background-color: rgb(255, 255, 255, 0.8); /* 透明背景色 */
-        padding: 30px;
+        //background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+        background-color: #E4E4E1;
+        background-image: radial-gradient(at top center, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.03) 100%), linear-gradient(to top, rgba(255, 255, 255, 0.1) 0%, rgba(143, 152, 157, 0.60) 100%);
+        background-blend-mode: normal, multiply;
+        //background-color: rgb(255, 255, 255, 0.6); /* 透明背景色 */
+        padding: 30px 30px 30px 0;
         border-radius: 20px; /* 圆角 */
     }
+
+    .el-input {
+        //box-shadow: inset 0 0 10px 15px #9bc5c3;
+    }
+
+    /* 如果你修改不成功，那么可能是，style标签上加上scoped属性，表示它的样式作用于当下模块，.el-inout__inner是一个全局属性。*/
+    /*
+        .el-input__inner {
+            background-color: #9bc5c3 !important;
+        }
+    */
 
     /* 标题 */
     .login-title {
         color: #303133;
         text-align: center;
+        padding-bottom: 10px;
     }
 </style>
