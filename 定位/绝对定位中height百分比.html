@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position:absolute</title>
+    <!--
+        w3c关于 包含块 和 初始包含块 的说明
+        https://www.w3.org/TR/CSS2/visudet.html#containing-block-details
+    -->
+
+</head>
+<style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        border: 1px solid red;
+        background-color: #ee8;
+    }
+
+    body {
+        width: 300px;
+        height: 200px;
+        margin: 10px auto;
+        background-color: #ffc2c2;
+        border: 1px solid #9595cf;
+    }
+
+    div {
+        width: 100px;
+        height: 100px;
+        background-color: #0c7777;
+        position: absolute; /* 默认情况下，不设置 left,right,top,bottom 属性时，绝对定位的元素位置和不设置定位时的位置一致 */
+    }
+
+    /* 第一种 */
+    /*
+        body {
+            position: relative;
+        }
+
+        div {
+            bottom: 0;
+        }
+    */
+
+    /* 第二种 */
+    /*
+        html {
+            position: relative;
+        }
+
+        div {
+            bottom: 0;
+        }
+    */
+
+    /* 第三种, body和html都不进行定位 */
+    /*
+        div {
+            bottom: 0;
+        }
+    */
+
+</style>
+<body>body
+<div>div</div>
+</body>
+</html>

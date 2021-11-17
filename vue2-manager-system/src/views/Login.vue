@@ -14,12 +14,16 @@
                 <el-button type="info" @click="login">登录</el-button>
             </el-form-item>
         </el-form>
+        <website-record></website-record>
     </div>
 </template>
 
 <script>
+    import WebsiteRecord from "./WebsiteRecord";
+
     export default {
         name: "login",
+        components: {WebsiteRecord},
         data() {
             return {
                 loginForm: {
@@ -93,15 +97,20 @@
         background-image: radial-gradient(at top center, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.03) 100%), linear-gradient(to top, rgba(255, 255, 255, 0.1) 0%, rgba(143, 152, 157, 0.60) 100%);
         background-blend-mode: normal, multiply;
         //background-color: rgb(255, 255, 255, 0.6); /* 透明背景色 */
-        padding: 30px 30px 30px 0;
         border-radius: 20px; /* 圆角 */
     }
 
+    .el-form-item {
+        margin-right: 25px;
+    }
+
     .el-input {
+        //padding: 30px 30px 30px 0;
         //box-shadow: inset 0 0 10px 15px #9bc5c3;
     }
 
-    /* 如果你修改不成功，那么可能是，style标签上加上scoped属性，表示它的样式作用于当下模块，.el-inout__inner是一个全局属性。*/
+    /* 如果你修改不成功，那么可能是，style标签上加上scoped属性，表示它的样式作用于当下模块，.el-inout__inner是一个全局属性。
+        可以通过自定义全局属性修改 */
     /*
         .el-input__inner {
             background-color: #9bc5c3 !important;
@@ -110,8 +119,14 @@
 
     /* 标题 */
     .login-title {
-        color: #303133;
+        color: #3B3535;
         text-align: center;
         padding-bottom: 10px;
     }
+
+    .website-record {
+        position: absolute;
+        bottom: 10px;
+    }
+
 </style>

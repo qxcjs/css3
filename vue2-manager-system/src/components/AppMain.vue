@@ -8,12 +8,16 @@
             <el-breadcrumb-item class="line" :to="{ path:  $route.path }">{{ $route.meta.title }}</el-breadcrumb-item>
         </el-breadcrumb>
         <router-view></router-view>
+        <website-record></website-record>
     </div>
 </template>
 
 <script>
+    import WebsiteRecord from "../views/WebsiteRecord";
+
     export default {
-        name: "AppMain"
+        name: "AppMain",
+        components: {WebsiteRecord}
     }
 </script>
 
